@@ -11,12 +11,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;color:var(--gray-dark);background:#
 a{text-decoration:none;color:inherit}
 
 /* NAV */
-nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px}
+nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px}
 .nav-logo{cursor:pointer}
 .nav-logo svg text{font-family:'Arial Black',sans-serif}
 .nav-links{display:flex;gap:0;list-style:none}
-.nav-links li a{color:#1A4FBF;padding:0 1rem;line-height:64px;font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .2s}
-.nav-links li a:hover,.nav-links li a.active{color:#0C2E7A}
+.nav-links li a{color:#111;padding:0 1rem;line-height:64px;font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .2s}
+.nav-links li a:hover,.nav-links li a.active{color:#1A4FBF}
 .nav-right{display:flex;align-items:center;gap:10px}
 .lang-btn{background:transparent;border:1.5px solid #1A4FBF;color:#1A4FBF;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.5px;transition:all .2s}
 .lang-btn:hover{background:rgba(26,79,191,.1)}
@@ -116,8 +116,9 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.55)
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;max-width:1100px;margin:0 auto}
 .project-card{background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
 .project-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.14)}
-.project-img{height:180px;background:linear-gradient(135deg,var(--blue-dark),var(--blue));display:flex;align-items:center;justify-content:center}
-.project-img svg{opacity:.25}
+.project-img{height:200px;overflow:hidden}
+.project-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.project-card:hover .project-img img{transform:scale(1.05)}
 .project-body{padding:20px}
 .project-body h4{font-size:14px;font-weight:700;color:var(--blue-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 .project-body p{font-size:13px;color:var(--gray);line-height:1.6}
@@ -456,12 +457,14 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
   </div>
   <div class="projects-section">
     <div class="projects-grid">
-      <div class="project-card"><div class="project-img"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Continental SLP</h4><p id="pr1">Diseño y construcción de sistema eléctrico industrial de media y baja tensión.</p></div></div>
-      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#0C2E6A,#1A4FBF)"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Lear Arteaga</h4><p id="pr2">Instalación de sistema eléctrico completo para planta automotriz.</p></div></div>
-      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#1A5F8A,#1A4FBF)"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Guala</h4><p id="pr3">Subestación reductora y distribución de baja tensión para planta industrial.</p></div></div>
-      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#0C2E7A,#2563B8)"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Preh</h4><p id="pr4">Sistema de respaldo de energía UPS y generadores para manufactura.</p></div></div>
-      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#1A4FBF,#1A6FBF)"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>C5</h4><p id="pr5">Infraestructura de datos, CCTV y control de acceso para centro de comando.</p></div></div>
-      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#0a1940,#1A4FBF)"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Magna</h4><p id="pr6">Proyecto integral eléctrico para planta de manufactura automotriz.</p></div></div>
+      <div class="project-card"><div class="project-img"><img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/proyecto_continental.jpg" alt="Continental Teves"></div><div class="project-body"><h4>Continental Teves</h4><p id="pr1">Diseño y construcción de sistema eléctrico industrial de media y baja tensión.</p></div></div>
+      <div class="project-card"><div class="project-img"><img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/proyecto_lear.jpg" alt="Lear Corporation"></div><div class="project-body"><h4>Lear Corporation</h4><p id="pr2">Instalación de sistema eléctrico completo para planta automotriz.</p></div></div>
+      <div class="project-card"><div class="project-img"><img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/proyecto_magna.jpg" alt="Magna Cosma"></div><div class="project-body"><h4>Magna Cosma</h4><p id="pr3">Proyecto integral eléctrico para planta de manufactura automotriz.</p></div></div>
+      <div class="project-card"><div class="project-img"><img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/proyecto_engrande.jpg" alt="C5 Toluca"></div><div class="project-body"><h4>C5 Toluca</h4><p id="pr4">Infraestructura eléctrica y de datos para Centro de Control, Comando, Comunicación y Cómputo.</p></div></div>
+      <div class="project-card"><div class="project-img"><img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/proyecto_wiwynn.jpg" alt="Wiwynn"></div><div class="project-body"><h4>Wiwynn</h4><p id="pr5">Sistema eléctrico de alta disponibilidad para centro de datos de manufactura tecnológica.</p></div></div>
+      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#0C2E7A,#1A4FBF);display:flex;align-items:center;justify-content:center"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Mack Trucks</h4><p id="pr6">Diseño e instalación de sistema eléctrico para planta de ensamble de vehículos de carga.</p></div></div>
+      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#0a1940,#2563B8);display:flex;align-items:center;justify-content:center"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>NAL</h4><p id="pr7">Subestación y distribución eléctrica para planta de manufactura aeroespacial.</p></div></div>
+      <div class="project-card"><div class="project-img" style="background:linear-gradient(135deg,#1A5F8A,#1A4FBF);display:flex;align-items:center;justify-content:center"><svg width="48" height="48" fill="none" stroke="#fff" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><div class="project-body"><h4>Guala</h4><p id="pr8">Subestación reductora y distribución de baja tensión para planta industrial.</p></div></div>
     </div>
   </div>
 </div>
@@ -557,6 +560,14 @@ var t={
     'ab-h3':'Visión','ab-p3':'Ser la empresa líder en ingeniería eléctrica en México, reconocida por la excelencia en ejecución de proyectos, innovación tecnológica y compromiso con la seguridad y el medio ambiente.',
     'osha-title':'Seguridad (OSHA)','osha-sub':'Equipo en constante capacitación',
     'svc-page-title':'Nuestros Servicios','svc-page-sub':'Soluciones eléctricas integrales desde el diseño hasta la puesta en marcha.',
+    'pr1':'Diseño y construcción de sistema eléctrico industrial de media y baja tensión.',
+    'pr2':'Instalación de sistema eléctrico completo para planta automotriz.',
+    'pr3':'Proyecto integral eléctrico para planta de manufactura automotriz.',
+    'pr4':'Infraestructura eléctrica y de datos para Centro de Control, Comando, Comunicación y Cómputo.',
+    'pr5':'Sistema eléctrico de alta disponibilidad para centro de datos de manufactura tecnológica.',
+    'pr6':'Diseño e instalación de sistema eléctrico para planta de ensamble de vehículos de carga.',
+    'pr7':'Subestación y distribución eléctrica para planta de manufactura aeroespacial.',
+    'pr8':'Subestación reductora y distribución de baja tensión para planta industrial.',
     'proj-title':'Proyectos','proj-sub':'Una selección de proyectos ejecutados por DIELEK a lo largo de nuestra trayectoria.',
     'con-title':'Contáctenos','con-sub':'Respondemos en menos de 24 horas en días hábiles.',
     'con-reach':'Por favor contáctenos, respondemos todas las consultas en menos de 24 horas en días hábiles.',
@@ -584,6 +595,14 @@ var t={
     'ab-h3':'Vision','ab-p3':'To be the leading electrical engineering company in Mexico, recognized for excellence in project execution, technological innovation, and commitment to safety and the environment.',
     'osha-title':'Safety (OSHA)','osha-sub':'Team in constant training',
     'svc-page-title':'Our Services','svc-page-sub':'Comprehensive electrical solutions from design to commissioning.',
+    'pr1':'Design and construction of industrial electrical system for medium and low voltage.',
+    'pr2':'Complete electrical system installation for automotive plant.',
+    'pr3':'Comprehensive electrical project for automotive manufacturing plant.',
+    'pr4':'Electrical and data infrastructure for C5 Command, Control, Communication & Computing Center.',
+    'pr5':'High-availability electrical system for technology manufacturing data center.',
+    'pr6':'Design and installation of electrical system for truck assembly plant.',
+    'pr7':'Substation and electrical distribution for aerospace manufacturing plant.',
+    'pr8':'Step-down substation and low-voltage distribution for industrial plant.',
     'proj-title':'Projects','proj-sub':'A selection of projects executed by DIELEK throughout our history.',
     'con-title':'Contact Us','con-sub':'Please reach out anytime — we respond within 24 hours on business days.',
     'con-reach':'Please reach out anytime, we strive to answer all inquiries within 24 hours on business days.',
