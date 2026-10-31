@@ -94,6 +94,26 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 .btn-contact-q{background:var(--blue-dark);color:#fff;padding:10px 22px;border:none;border-radius:3px;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.5px;text-transform:uppercase;transition:background .2s}
 .btn-contact-q:hover{background:var(--blue)}
 
+/* ABOUT COMPANY SECTION */
+.about-company{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:#fff}
+.about-company-text{padding:64px 56px;display:flex;flex-direction:column;justify-content:center}
+.about-company-text .eyebrow{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:14px}
+.about-company-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--blue-dark);text-transform:uppercase;letter-spacing:1px;line-height:1.2;margin-bottom:20px}
+.about-company-text p{font-size:14px;color:var(--gray);line-height:1.85;margin-bottom:16px}
+.logo-evolution{display:flex;align-items:center;gap:18px;margin-top:28px;padding-top:24px;border-top:1px solid #e8edf5}
+.logo-evolution-item{display:flex;flex-direction:column;align-items:center;gap:6px}
+.logo-evolution-item img{object-fit:contain}
+.logo-evolution-item span{font-size:10px;color:#aaa;letter-spacing:1px;text-transform:uppercase}
+.logo-arrow{color:#ccc;font-size:1.4rem;flex-shrink:0;align-self:center}
+.about-company-map{background:#f5f7fa;display:flex;align-items:center;justify-content:center;padding:40px;position:relative}
+.about-company-map img{width:100%;max-width:560px;height:auto;filter:drop-shadow(0 4px 24px rgba(26,79,191,.15))}
+.map-caption{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:2px;opacity:.7}
+@media(max-width:900px){
+  .about-company{grid-template-columns:1fr}
+  .about-company-map{min-height:300px}
+  .about-company-text{padding:40px 24px}
+}
+
 /* STATS2 */
 .stats2{padding:50px 2rem;text-align:center;background:#fff}
 .stats2-row{display:flex;justify-content:center;gap:80px;flex-wrap:wrap;margin-bottom:48px}
@@ -245,6 +265,31 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
     <div class="stat"><span class="stat-num">250+</span><span class="stat-lbl" id="st2">Clientes</span></div>
     <div class="stat"><span class="stat-num">350+</span><span class="stat-lbl" id="st3">Proyectos</span></div>
     <div class="stat"><span class="stat-num">250+</span><span class="stat-lbl" id="st4">Clientes Satisfechos</span></div>
+  </div>
+
+  <!-- ABOUT COMPANY + MAP -->
+  <div class="about-company" id="about-company-section">
+    <div class="about-company-text">
+      <div class="eyebrow" id="ac-eyebrow">Quiénes Somos</div>
+      <h2 id="ac-title">Más de 4 Décadas<br>de Ingeniería Eléctrica</h2>
+      <p id="ac-p1">Fundada en 1983, DIELEK Ingeniería Eléctrica es una empresa mexicana líder en diseño, construcción y mantenimiento de sistemas eléctricos para la industria. A lo largo de cuatro décadas hemos consolidado nuestra presencia en los principales corredores industriales de México.</p>
+      <p id="ac-p2">Atendemos a clientes de clase mundial en los sectores automotriz, manufactura, tecnología y construcción, ofreciendo soluciones integrales que van desde subestaciones de alta tensión hasta sistemas de automatización y domótica de última generación.</p>
+      <div class="logo-evolution">
+        <div class="logo-evolution-item">
+          <img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_2015.jpg" alt="DIELEK Logo 2015" style="height:48px;width:auto;border-radius:3px;">
+          <span id="ac-logo-old">Desde 1983</span>
+        </div>
+        <div class="logo-arrow">→</div>
+        <div class="logo-evolution-item">
+          <img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo2.png" alt="DIELEK Logo Actual" style="height:48px;width:auto;">
+          <span id="ac-logo-new">Hoy</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-company-map">
+      <img src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/mapa_mexico.png" alt="Presencia nacional DIELEK en México">
+      <div class="map-caption" id="ac-map-caption">Presencia Nacional · 15+ Estados</div>
+    </div>
   </div>
 
   <!-- SERVICE STRIPS -->
@@ -575,7 +620,11 @@ var t={
     'btn-send':'Enviar Mensaje','form-success':'✔ ¡Mensaje enviado! Nos pondremos en contacto pronto.',
     'off1-label':'Oficina Principal','off2-label':'Oficina Bajío',
     'fn-home':'Inicio','fn-about':'Nosotros','fn-svc':'Servicios','fn-proj':'Proyectos','fn-con':'Contacto',
-    'footer-copy':'© 2025 DIELEK Ingeniería Eléctrica'
+    'footer-copy':'© 2025 DIELEK Ingeniería Eléctrica',
+    'ac-eyebrow':'Quiénes Somos','ac-title':'Más de 4 Décadas<br>de Ingeniería Eléctrica',
+    'ac-p1':'Fundada en 1983, DIELEK Ingeniería Eléctrica es una empresa mexicana líder en diseño, construcción y mantenimiento de sistemas eléctricos para la industria. A lo largo de cuatro décadas hemos consolidado nuestra presencia en los principales corredores industriales de México.',
+    'ac-p2':'Atendemos a clientes de clase mundial en los sectores automotriz, manufactura, tecnología y construcción, ofreciendo soluciones integrales que van desde subestaciones de alta tensión hasta sistemas de automatización y domótica de última generación.',
+    'ac-logo-old':'Desde 1983','ac-logo-new':'Hoy','ac-map-caption':'Presencia Nacional · 15+ Estados'
   },
   en:{
     'nav-home':'Home','nav-about':'About Us','nav-services':'Services','nav-projects':'Projects','nav-contact':'Contact',
@@ -617,7 +666,11 @@ var t={
     'btn-send':'Send Message','form-success':'✔ Message sent! We will be in touch shortly.',
     'off1-label':'Main Office','off2-label':'Bajío Office',
     'fn-home':'Home','fn-about':'About Us','fn-svc':'Services','fn-proj':'Projects','fn-con':'Contact',
-    'footer-copy':'© 2025 DIELEK Electrical Engineering'
+    'footer-copy':'© 2025 DIELEK Electrical Engineering',
+    'ac-eyebrow':'Who We Are','ac-title':'Over 4 Decades<br>of Electrical Engineering',
+    'ac-p1':'Founded in 1983, DIELEK Ingeniería Eléctrica is a leading Mexican company specializing in the design, construction and maintenance of electrical systems for industry. Over four decades we have established our presence in Mexico\'s main industrial corridors.',
+    'ac-p2':'We serve world-class clients in the automotive, manufacturing, technology and construction sectors, offering comprehensive solutions ranging from high-voltage substations to state-of-the-art automation and smart building systems.',
+    'ac-logo-old':'Since 1983','ac-logo-new':'Today','ac-map-caption':'National Presence · 15+ States'
   }
 };
 
