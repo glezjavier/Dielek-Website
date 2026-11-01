@@ -127,8 +127,9 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 .flag-item span{font-size:11px;color:var(--gray);letter-spacing:.5px}
 .flag-emoji{font-size:2rem}
 .clients-title{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:2px;margin:32px 0 16px}
-.clients-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;max-width:800px;margin:0 auto}
-.client-logo{font-size:13px;font-weight:700;color:#888;letter-spacing:1px;text-transform:uppercase;padding:4px 0}
+.clients-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px 36px;max-width:900px;margin:0 auto}
+.client-logo-img{height:36px;width:auto;max-width:110px;object-fit:contain;filter:grayscale(1);opacity:.55;transition:filter .3s,opacity .3s}
+.client-logo-img:hover{filter:grayscale(0);opacity:1}
 
 /* PROJECTS */
 .projects-section{padding:70px 2rem;background:#f5f7fa}
@@ -360,19 +361,17 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
     </div>
     <p class="clients-title" id="clients-title">Clientes</p>
     <div class="clients-logos">
-      <span class="client-logo">Electrolux</span>
-      <span class="client-logo">Lear</span>
-      <span class="client-logo">Continental</span>
-      <span class="client-logo">Magna</span>
-      <span class="client-logo">Johnson &amp; Johnson</span>
-      <span class="client-logo">AKG</span>
-      <span class="client-logo">Sixx</span>
-      <span class="client-logo">Toyota</span>
-      <span class="client-logo">Microtel</span>
-      <span class="client-logo">Cinemark</span>
-      <span class="client-logo">Bodycoté</span>
-      <span class="client-logo">Preh</span>
-      <span class="client-logo">Wiwynn</span>
+      <img class="client-logo-img" src="https://img.logo.dev/electrolux.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Electrolux">
+      <img class="client-logo-img" src="https://img.logo.dev/lear.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Lear">
+      <img class="client-logo-img" src="https://img.logo.dev/continental.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Continental">
+      <img class="client-logo-img" src="https://img.logo.dev/magna.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Magna">
+      <img class="client-logo-img" src="https://img.logo.dev/jnj.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Johnson &amp; Johnson">
+      <img class="client-logo-img" src="https://img.logo.dev/toyota.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Toyota">
+      <img class="client-logo-img" src="https://img.logo.dev/crown.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Crown">
+      <img class="client-logo-img" src="https://img.logo.dev/corning.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Corning">
+      <img class="client-logo-img" src="https://img.logo.dev/bodycote.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Bodycoté">
+      <img class="client-logo-img" src="https://img.logo.dev/preh.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Preh">
+      <img class="client-logo-img" src="https://img.logo.dev/wiwynn.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Wiwynn">
     </div>
   </div>
 
@@ -413,7 +412,17 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
 
     <p class="clients-title" id="ab-clients">Clientes</p>
     <div class="clients-logos">
-      <span class="client-logo">Electrolux</span><span class="client-logo">Lear</span><span class="client-logo">Continental</span><span class="client-logo">Magna</span><span class="client-logo">Johnson &amp; Johnson</span><span class="client-logo">AKG</span><span class="client-logo">Sixx</span><span class="client-logo">Toyota</span><span class="client-logo">Microtel</span><span class="client-logo">Cinemark</span><span class="client-logo">Bodycoté</span><span class="client-logo">Preh</span><span class="client-logo">Wiwynn</span>
+      <img class="client-logo-img" src="https://img.logo.dev/electrolux.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Electrolux">
+      <img class="client-logo-img" src="https://img.logo.dev/lear.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Lear">
+      <img class="client-logo-img" src="https://img.logo.dev/continental.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Continental">
+      <img class="client-logo-img" src="https://img.logo.dev/magna.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Magna">
+      <img class="client-logo-img" src="https://img.logo.dev/jnj.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Johnson &amp; Johnson">
+      <img class="client-logo-img" src="https://img.logo.dev/toyota.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Toyota">
+      <img class="client-logo-img" src="https://img.logo.dev/crown.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Crown">
+      <img class="client-logo-img" src="https://img.logo.dev/corning.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Corning">
+      <img class="client-logo-img" src="https://img.logo.dev/bodycote.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Bodycoté">
+      <img class="client-logo-img" src="https://img.logo.dev/preh.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Preh">
+      <img class="client-logo-img" src="https://img.logo.dev/wiwynn.com?token=pk_Mv7ouFRgRsyus0dEOoMgow&size=200&format=png" alt="Wiwynn">
     </div>
   </div>
 </div>
