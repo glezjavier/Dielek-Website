@@ -127,8 +127,14 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 .flag-item span{font-size:11px;color:var(--gray);letter-spacing:.5px}
 .flag-emoji{font-size:2rem}
 .clients-title{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:2px;margin:32px 0 16px}
-.clients-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:24px 36px;max-width:900px;margin:0 auto}
-.client-logo-img{height:36px;width:auto;max-width:110px;object-fit:contain;filter:grayscale(1);opacity:.55;transition:filter .3s,opacity .3s}
+.clients-carousel-wrap{overflow:hidden;width:100%;max-width:900px;margin:0 auto;position:relative}
+.clients-carousel-wrap::before,.clients-carousel-wrap::after{content:'';position:absolute;top:0;width:80px;height:100%;z-index:2;pointer-events:none}
+.clients-carousel-wrap::before{left:0;background:linear-gradient(to right,#fff,transparent)}
+.clients-carousel-wrap::after{right:0;background:linear-gradient(to left,#fff,transparent)}
+.clients-logos{display:flex;align-items:center;gap:56px;width:max-content;animation:scroll-logos 22s linear infinite}
+.clients-logos:hover{animation-play-state:paused}
+@keyframes scroll-logos{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.client-logo-img{height:36px;width:auto;max-width:120px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .3s,opacity .3s;flex-shrink:0}
 .client-logo-img:hover{filter:grayscale(0);opacity:1}
 
 /* PROJECTS */
@@ -360,17 +366,30 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
       <div><span class="stat2-num">250</span><span class="stat2-lbl" id="st2-3">Satisfied Customers</span></div>
     </div>
     <p class="clients-title" id="clients-title">Clientes</p>
-    <div class="clients-logos">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_electrolux.png" alt="Electrolux">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_lear.png" alt="Lear">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_continental.png" alt="Continental">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_magna.png" alt="Magna">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_jj.png" alt="Johnson &amp; Johnson">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_toyota.png" alt="Toyota">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_corning.jpg" alt="Corning">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_bodycote.png" alt="Bodycoté">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_preh.png" alt="Preh">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_wiwynn.png" alt="Wiwynn">
+    <div class="clients-carousel-wrap">
+      <div class="clients-logos">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_electrolux.png" alt="Electrolux">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_lear.png" alt="Lear">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_continental.png" alt="Continental">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_magna.png" alt="Magna">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_jj.png" alt="Johnson &amp; Johnson">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_toyota.png" alt="Toyota">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_corning.webp" alt="Corning">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_bodycote.png" alt="Bodycoté">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_preh.png" alt="Preh">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_wiwynn.png" alt="Wiwynn">
+        <!-- duplicado para loop infinito -->
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_electrolux.png" alt="Electrolux">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_lear.png" alt="Lear">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_continental.png" alt="Continental">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_magna.png" alt="Magna">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_jj.png" alt="Johnson &amp; Johnson">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_toyota.png" alt="Toyota">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_corning.webp" alt="Corning">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_bodycote.png" alt="Bodycoté">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_preh.png" alt="Preh">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_wiwynn.png" alt="Wiwynn">
+      </div>
     </div>
   </div>
 
@@ -410,17 +429,30 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
   <div class="stats2" style="padding-top:60px">
 
     <p class="clients-title" id="ab-clients">Clientes</p>
-    <div class="clients-logos">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_electrolux.png" alt="Electrolux">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_lear.png" alt="Lear">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_continental.png" alt="Continental">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_magna.png" alt="Magna">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_jj.png" alt="Johnson &amp; Johnson">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_toyota.png" alt="Toyota">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_corning.jpg" alt="Corning">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_bodycote.png" alt="Bodycoté">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_preh.png" alt="Preh">
-      <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_wiwynn.png" alt="Wiwynn">
+    <div class="clients-carousel-wrap">
+      <div class="clients-logos">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_electrolux.png" alt="Electrolux">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_lear.png" alt="Lear">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_continental.png" alt="Continental">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_magna.png" alt="Magna">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_jj.png" alt="Johnson &amp; Johnson">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_toyota.png" alt="Toyota">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_corning.webp" alt="Corning">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_bodycote.png" alt="Bodycoté">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_preh.png" alt="Preh">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_wiwynn.png" alt="Wiwynn">
+        <!-- duplicado para loop infinito -->
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_electrolux.png" alt="Electrolux">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_lear.png" alt="Lear">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_continental.png" alt="Continental">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_magna.png" alt="Magna">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_jj.png" alt="Johnson &amp; Johnson">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_toyota.png" alt="Toyota">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_corning.webp" alt="Corning">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_bodycote.png" alt="Bodycoté">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_preh.png" alt="Preh">
+        <img class="client-logo-img" src="https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/logo_wiwynn.png" alt="Wiwynn">
+      </div>
     </div>
   </div>
 </div>
