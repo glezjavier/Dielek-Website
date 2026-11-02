@@ -131,11 +131,10 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 .clients-carousel-wrap::before,.clients-carousel-wrap::after{content:'';position:absolute;top:0;width:80px;height:100%;z-index:2;pointer-events:none}
 .clients-carousel-wrap::before{left:0;background:linear-gradient(to right,#fff,transparent)}
 .clients-carousel-wrap::after{right:0;background:linear-gradient(to left,#fff,transparent)}
-.clients-logos{display:flex;align-items:center;gap:56px;width:max-content;animation:scroll-logos 22s linear infinite}
+.clients-logos{display:flex;align-items:center;gap:56px;width:max-content;animation:scroll-logos 44s linear infinite}
 .clients-logos:hover{animation-play-state:paused}
 @keyframes scroll-logos{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.client-logo-img{height:36px;width:auto;max-width:120px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .3s,opacity .3s;flex-shrink:0}
-.client-logo-img:hover{filter:grayscale(0);opacity:1}
+.client-logo-img{height:48px;width:120px;object-fit:contain;filter:none;opacity:1;flex-shrink:0}
 
 /* PROJECTS */
 .projects-section{padding:70px 2rem;background:#f5f7fa}
