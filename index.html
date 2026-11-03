@@ -86,12 +86,14 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 /* OSHA SECTION */
 .osha-section{display:grid;grid-template-columns:1fr 1fr;min-height:288px}
 .osha-img{background:linear-gradient(rgba(10,25,60,.5),rgba(10,25,60,.5)),url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros3.jpg') center/cover no-repeat}
-.osha-text{background:#0a1940;padding:60px 48px;display:flex;flex-direction:column;justify-content:center}
-.osha-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;text-transform:uppercase;margin-bottom:8px}
-.osha-text .sub{color:#5A9BF5;font-size:14px;margin-bottom:24px}
-.osha-text ul{list-style:none}
-.osha-text ul li{color:rgba(255,255,255,.8);font-size:14px;line-height:2.2;padding-left:14px;position:relative}
-.osha-text ul li::before{content:'–';position:absolute;left:0;color:#5A9BF5}
+.osha-text{background:#0a1940;padding:48px 48px;display:flex;flex-direction:column;justify-content:flex-start;overflow-y:auto}
+.osha-text h2{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;color:#fff;text-transform:uppercase;margin-bottom:8px}
+.osha-text .sub{color:#5A9BF5;font-size:13px;margin-bottom:16px}
+.osha-text .osha-intro{color:rgba(255,255,255,.75);font-size:13px;line-height:1.7;margin-bottom:20px}
+.osha-text ul{list-style:none;margin:0;padding:0}
+.osha-text ul li{color:rgba(255,255,255,.9);font-size:13px;font-weight:600;line-height:1.4;padding:6px 0 6px 16px;position:relative;border-bottom:1px solid rgba(255,255,255,.08)}
+.osha-text ul li:last-child{border-bottom:none}
+.osha-text ul li::before{content:'–';position:absolute;left:0;color:#5A9BF5;font-weight:700}
 
 /* QUALITY CTA */
 .quality-cta{background:#f5f7fa;padding:60px 2rem;display:flex;justify-content:center}
@@ -429,10 +431,17 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
 
   <div class="osha-section">
     <div class="osha-text">
-      <h2 id="osha-title">Seguridad (OSHA)</h2>
-      <p class="sub" id="osha-sub">Equipo en constante capacitación</p>
+      <h2 id="osha-title">Capacidades Técnicas</h2>
+      <p class="sub" id="osha-sub">Equipo altamente capacitado</p>
+      <p class="osha-intro">Nuestro equipo de ingenieros combina experiencia en campo con el dominio de herramientas de vanguardia, garantizando proyectos ejecutados con precisión, seguridad y eficiencia en cada etapa.</p>
       <ul>
-        <li>BIM</li><li>REVIT</li><li>AUTOCAD</li><li>SKM</li><li>AGi32</li><li>OPUS</li>
+        <li>Gestión de Proyectos PMI</li>
+        <li>Metodología Kanban</li>
+        <li>Building Information Modeling (BIM)</li>
+        <li>Software especializado en diseño eléctrico Power Tools SKM</li>
+        <li>Diseño de iluminación AGi32</li>
+        <li>Ingeniería de costos OPUS</li>
+        <li>Implementación de IA agentica</li>
       </ul>
     </div>
     <div class="osha-slideshow" id="ss2">
