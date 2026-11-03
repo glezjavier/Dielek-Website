@@ -71,7 +71,14 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 
 /* ABOUT SECTION */
 .about-split{display:grid;grid-template-columns:1fr 1fr;min-height:420px}
-.about-img{background:linear-gradient(rgba(10,25,60,.3),rgba(10,25,60,.3)),url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros1.jpg') center/cover no-repeat}
+.about-img{position:relative;overflow:hidden;min-height:420px}
+/* SLIDESHOW 1 */
+.slideshow{position:relative;width:100%;height:100%;min-height:420px;overflow:hidden}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease;z-index:0}
+.slide.active{opacity:1;z-index:1}
+/* SLIDESHOW 2 */
+.osha-slideshow{position:relative;overflow:hidden;min-height:360px}
+.osha-slideshow .slide{min-height:360px}
 .about-text-side{padding:60px 48px;display:flex;flex-direction:column;justify-content:center;background:#fff}
 .about-text-side h3{font-size:1.1rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
 .about-text-side p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px}
@@ -398,7 +405,12 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
 <!-- ========== ABOUT ========== -->
 <div class="page" id="page-about">
   <div class="about-split">
-    <div class="about-img"></div>
+    <div class="about-img">
+      <div class="slideshow" id="ss1">
+        <div class="slide active" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros1.jpg')"></div>
+        <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros2.jpg')"></div>
+      </div>
+    </div>
     <div class="about-text-side">
       <div class="about-section-block">
         <h3 id="ab-h1">Historia de la Empresa</h3>
@@ -423,7 +435,11 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
         <li>BIM</li><li>REVIT</li><li>AUTOCAD</li><li>SKM</li><li>AGi32</li><li>OPUS</li>
       </ul>
     </div>
-    <div class="osha-img"></div>
+    <div class="osha-slideshow" id="ss2">
+      <div class="slide active" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros3.jpg')"></div>
+      <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros4.jpg')"></div>
+      <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros5.jpg')"></div>
+    </div>
   </div>
 
   <div class="stats2" style="padding-top:60px">
@@ -687,6 +703,21 @@ function submitForm(){
   document.getElementById('inp-phone').value='';
   document.getElementById('inp-msg').value='';
 }
+
+// Slideshows automáticos página Nosotros
+function startSlideshow(id, interval){
+  const ss = document.getElementById(id);
+  if(!ss) return;
+  const slides = ss.querySelectorAll('.slide');
+  let cur = 0;
+  setInterval(function(){
+    slides[cur].classList.remove('active');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('active');
+  }, interval);
+}
+startSlideshow('ss1', 4000);
+startSlideshow('ss2', 4000);
 </script>
 </body>
 </html>
