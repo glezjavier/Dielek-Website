@@ -70,21 +70,21 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 @media(max-width:768px){.svc-grid{grid-template-columns:1fr}}
 
 /* ABOUT SECTION */
-.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:420px}
-.about-img{position:relative;overflow:hidden;min-height:420px}
+.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:336px}
+.about-img{position:relative;overflow:hidden;min-height:336px}
 /* SLIDESHOW 1 */
-.slideshow{position:relative;width:100%;height:100%;min-height:420px;overflow:hidden}
+.slideshow{position:relative;width:100%;height:100%;min-height:336px;overflow:hidden}
 .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease;z-index:0}
 .slide.active{opacity:1;z-index:1}
 /* SLIDESHOW 2 */
-.osha-slideshow{position:relative;overflow:hidden;min-height:360px}
-.osha-slideshow .slide{min-height:360px}
+.osha-slideshow{position:relative;overflow:hidden;min-height:288px}
+.osha-slideshow .slide{min-height:288px}
 .about-text-side{padding:60px 48px;display:flex;flex-direction:column;justify-content:center;background:#fff}
 .about-text-side h3{font-size:1.1rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
 .about-text-side p{font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px}
 
 /* OSHA SECTION */
-.osha-section{display:grid;grid-template-columns:1fr 1fr;min-height:360px}
+.osha-section{display:grid;grid-template-columns:1fr 1fr;min-height:288px}
 .osha-img{background:linear-gradient(rgba(10,25,60,.5),rgba(10,25,60,.5)),url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros3.jpg') center/cover no-repeat}
 .osha-text{background:#0a1940;padding:60px 48px;display:flex;flex-direction:column;justify-content:center}
 .osha-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;text-transform:uppercase;margin-bottom:8px}
@@ -189,7 +189,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(255,255,255,.35)
 
 /* ABOUT PAGE */
 .about-page-grid{display:grid;grid-template-columns:1fr 1fr}
-.about-page-photo{min-height:480px;background:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros2.jpg') center/cover no-repeat}
+.about-page-photo{min-height:384px;background:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros2.jpg') center/cover no-repeat}
 .about-page-text{padding:70px 60px;background:#fff}
 .about-section-block{margin-bottom:32px}
 .about-section-block h3{font-size:1rem;font-weight:700;color:var(--blue-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
@@ -210,7 +210,7 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
 /* RESPONSIVE */
 @media(max-width:900px){
   .about-split,.osha-section,.about-page-grid{grid-template-columns:1fr}
-  .about-img,.osha-img,.about-page-photo{min-height:260px}
+  .about-img,.osha-img,.about-page-photo{min-height:208px}
   .contact-body{grid-template-columns:1fr}
   .offices-contact{grid-template-columns:1fr;padding:24px}
   .quality-card{flex-direction:column}
@@ -409,9 +409,10 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
       <div class="slideshow" id="ss1">
         <div class="slide active" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros1.jpg')"></div>
         <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros2.jpg')"></div>
+      <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros7.jpg')"></div>
       </div>
     </div>
-    <div class="about-text-side">
+    <div class="about-text-side" style="padding-top:48px">
       <div class="about-section-block">
         <h3 id="ab-h1">Historia de la Empresa</h3>
         <p id="ab-p1">Fundada en 1983, DIELEK Ingeniería Eléctrica nació con la misión de proveer soluciones eléctricas de alta calidad para la industria y el sector comercial. Con 42 años de trayectoria, somos referente en diseño y construcción de sistemas eléctricos en México.</p>
@@ -439,6 +440,7 @@ footer{background:#0a1940;color:#fff;padding:40px 2rem 20px}
       <div class="slide active" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros3.jpg')"></div>
       <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros4.jpg')"></div>
       <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros5.jpg')"></div>
+      <div class="slide" style="background-image:url('https://raw.githubusercontent.com/glezjavier/Dielek-Website/main/nosotros6.jpg');background-size:contain;background-repeat:no-repeat;background-color:#f5f7fa"></div>
     </div>
   </div>
 
